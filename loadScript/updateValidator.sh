@@ -59,11 +59,13 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
+sudo touch ~/.wanchain/startGwan.sh
+sudo chmod 666 ~/.wanchain/startGwan.sh
 sudo echo '#!/bin/bash'  > ~/.wanchain/startGwan.sh
 sudo echo ''  >> ~/.wanchain/startGwan.sh
 sudo echo "/bin/monitor.sh 1515 &" >> ~/.wanchain/startGwan.sh
 sudo echo "/bin/gwan ${NETWORK} --miner.etherbase ${addrNew} --unlock ${addrNew} --password /root/.wanchain/pw.txt --mine --miner.threads=1 --ethstats ${YOUR_NODE_NAME}:admin@testnet.wanstats.io" >> ~/.wanchain/startGwan.sh
-chmod 755 ~/.wanchain/startGwan.sh
+sudo chmod 755 ~/.wanchain/startGwan.sh
 
 
 sudo docker run -d --log-opt max-size=100m --log-opt max-file=3 --name gwan -p 17717:17717 -p 17717:17717/udp -v ~/.wanchain:/root/.wanchain ${DOCKERIMG} /root/.wanchain/startGwan.sh
