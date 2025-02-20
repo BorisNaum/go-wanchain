@@ -286,12 +286,12 @@ Input parameters:
 
 Return parameters:
 
-- An array of data structures, including the address and the corresponding probability value: {addr string, probility *big.Int}, similar to:
+- An array of data structures, including the address and the corresponding probability value: {addr string, probability *big.Int}, similar to:
 ```
 [{address, probability}, {address, probability}, {address, probability}, {address, probability}, {address, probability}, {address, probability}, {address, probability}
 The first address corresponds to the proxy address.
 ```
-- Proxy dividend ratio (if the dividend ratio is 100.00%, it is an independent running node, not acting for others), the value range is 1~10000. (we aslo called feerate).
+- Proxy dividend ratio (if the dividend ratio is 100.00%, it is an independent running node, not acting for others), the value range is 1~10000. (we also called feerate).
 - Total proportion, the sum of the total probabilities
 
 
