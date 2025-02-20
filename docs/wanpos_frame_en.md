@@ -67,5 +67,5 @@ Because the blockchain's blockNumber is not corresponding to time(allow there is
 
 
 ## when to generate epoch/RB leader
-when download a new block(insertChain in blockchain.go) or generate a new block(Seal in pluto.go), we update the last block number for a epoch, if the epoch id updated, we start to caculate the epoch Leader and rb group(GetEpocherInst().SelectLeadersLoop()) and store them in local DB.
+when download a new block(insertChain in blockchain.go) or generate a new block(Seal in pluto.go), we update the last block number for a epoch, if the epoch id updated, we start to calculate the epoch Leader and rb group(GetEpocherInst().SelectLeadersLoop()) and store them in local DB.
 
