@@ -75,7 +75,7 @@ over between the main network and test network, you should make sure to always u
 for play-money and real-money. Unless you manually move accounts, gwan will by default correctly
 separate the two networks and will not make any accounts available between them.*
 
-### Programatically interfacing gwan nodes
+### Programmatically interfacing gwan nodes
 
 As a developer, sooner rather than later you'll want to start interacting with gwan and the wanchain
 network via your own programs and not manually through the console. To aid this, gwan has built in
