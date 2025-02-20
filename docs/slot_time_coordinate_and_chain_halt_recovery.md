@@ -1,5 +1,5 @@
 ## Problem background
-Currently the slot is accurately align with time.because according the security model, the block chain honest node never offline K slot time. Also assume the chain never down. But in pratice maybe there unexpected bug cause network crashed.
+Currently the slot is accurately align with time.because according the security model, the block chain honest node never offline K slot time. Also assume the chain never down. But in practice maybe there unexpected bug cause network crashed.
 So how we react this scenario.
 
 
@@ -16,7 +16,7 @@ We make a proposal:
 ### disadvantage
 * slot time is offset time, the calculation turns complicated
 * after recovering chain, the the epoch for the last valid block for recovering need to record more than one start time, which will bring more work to do for the block verify in downloading process
-* for the current wanchain system, there are more modification for code,such as header verify, slot time caculation and epoch start time recording ...  
+* for the current wanchain system, there are more modification for code,such as header verify, slot time calculation and epoch start time recording ...  
 * difficult to coordinate with partners to upgrade gwan programe and keep online
 
 
@@ -24,12 +24,12 @@ We make a proposal:
 ## Solution 2
 
 *  use relative time to pos genesis starting time to calculate epoch id and slot id
-*  if whole nework stop, use pos starting block state to start a new epoch
+*  if whole network stop, use pos starting block state to start a new epoch
 *  use foundation nodes to start the new epoch to recover the block chain growing
 *  after block block chain recovered, coordinate partiner to upgrade gwan node
 
 ### advantage
-* epochid slotid caculation is simple and same with current code, do not need change
+* epochid slotid calculation is simple and same with current code, do not need change
 * code for recovering chain growing is simple, only need to set the initializing process, other system do not need make much modification
 * do not need to care about if partners nodes is online or offline
 
